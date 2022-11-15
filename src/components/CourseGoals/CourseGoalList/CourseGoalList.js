@@ -3,10 +3,11 @@ import React from 'react';
 import CourseGoalItem from '../CourseGoalItem/CourseGoalItem';
 import './CourseGoalList.css';
 
-const CourseGoalList = props => {
+const CourseGoalList = (props) => {  // {items: Array(2), onDeleteItem: ƒ}
+
   return (
     <ul className="goal-list">
-      {props.items.map(goal => (
+      {props.items.map((goal) => (
         <CourseGoalItem
           key={goal.id}
           id={goal.id}
